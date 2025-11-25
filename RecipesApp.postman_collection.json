@@ -1,0 +1,225 @@
+{
+	"info": {
+		"_postman_id": "67982a18-d818-4ecf-8697-77b249892804",
+		"name": "RecipesApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "50056082",
+		"_collection_link": "https://micaalv8-1103400.postman.co/workspace/Mica's-Workspace~06900ab5-b629-4c39-8752-f1b5f656b1ee/collection/50056082-67982a18-d818-4ecf-8697-77b249892804?action=share&source=collection_link&creator=50056082"
+	},
+	"item": [
+		{
+			"name": "GET/ recipes",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/recipes",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"recipes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "recipe/:id",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/recipe/2",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"recipe",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST/ recipe",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzY0MTE0MjY3LCJleHAiOjE3NjQxMTc4Njd9.TTQxGTyLot3sit5KnY9UElyrdMX_xiaNReSwvSIhJBg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Granola de cacao\",\n    \"ingredients\": \"30 g de cacao en polvo, 5 g de sal, 60 ml de aceite de coco, 80 ml de miel, 250 g de copos de avena, 50 g de nueces, 125 g de almendras, 20 g de coco rallado\",\n    \"instructions\": \"1. Precalentar el horno a 150ºC. 2. Preparar una bandeja para horno con papel vegetal. 3. En un cuenco añadir el aceite de coco, la miel, el cacao en polvo y la sal. 4. En otro cuenco añadir los copos de avena, las nueces, las almendras y el coco rallado. Juntar los ingredientes húmedos con los secos y mezclar. 5. Esparcir la mezcla en la fuente para horno y hornear durante 20’ mezclando cada 5’ para lograr un tostado uniforme. 6. Dejar enfriar por completo y guardar en un recipiente hermético\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/recipe",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"recipe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT/ recipe/:id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzY0MTAzODQ5LCJleHAiOjE3NjQxMDc0NDl9.pi08rtasm8JoISEwAhfyvIIT-miG30r3t-owRLEfSLY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Granola de chocolate\",\n    \"ingredients\": \"30 g de cacao en polvo, 5 g de sal, 60 ml de aceite de coco, 80 ml de miel, 250 g de copos de avena, 50 g de nueces, 125 g de almendras, 20 g de coco rallado\",\n    \"instructions\": \"1. Precalentar el horno a 150ºC. 2. Preparar una bandeja para horno con papel vegetal. 3. En un cuenco añadir el aceite de coco, la miel, el cacao en polvo y la sal. 4. En otro cuenco añadir los copos de avena, las nueces, las almendras y el coco rallado. Juntar los ingredientes húmedos con los secos y mezclar. 5. Esparcir la mezcla en la fuente para horno y hornear durante 20’ mezclando cada 5’ para lograr un tostado uniforme. 6. Dejar enfriar por completo y guardar en un recipiente hermético\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/recipe/5",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"recipe",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PATCH/ recipe/:id",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzY0MTAzODQ5LCJleHAiOjE3NjQxMDc0NDl9.pi08rtasm8JoISEwAhfyvIIT-miG30r3t-owRLEfSLY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Granola de chocolate\",\n    \"ingredients\": \"30 g de cacao en polvo, 5 g de sal, 60 ml de aceite de coco, 80 ml de miel, 250 g de copos de avena, 50 g de nueces, 125 g de almendras, 20 g de coco rallado\",\n    \"instructions\": \"1. Precalentar el horno a 150ºC. 2. Preparar una bandeja para horno con papel vegetal. 3. En un cuenco añadir el aceite de coco, la miel, el cacao en polvo y la sal. 4. En otro cuenco añadir los copos de avena, las nueces, las almendras y el coco rallado. Juntar los ingredientes húmedos con los secos y mezclar. 5. Esparcir la mezcla en la fuente para horno y hornear durante 20’ mezclando cada 5’ para lograr un tostado uniforme. 6. Dejar enfriar por completo y guardar en un recipiente hermético\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/recipe/6",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"recipe",
+						"6"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST/signup",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"pepa\",\n    \"email\": \"lapepita@gmail.com\",\n    \"password\": \"HolaPepa\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/signup",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST/login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"lapaquita@gmail.com\",\n    \"password\": \"HolaPaquita\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
