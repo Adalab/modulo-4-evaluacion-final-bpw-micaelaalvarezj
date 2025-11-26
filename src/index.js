@@ -1,15 +1,15 @@
 const express = require("express");
 const cors = require("cors");
-const mysql = require("./database/mysql-pool");
 const { authenticateToken } = require("./middlewares/authenticate-token");
-const { postSignupController } = require("./controllers/post-signup-controller");
-const { postLoginController } = require("./controllers/post-login-controller");
-const { postRecipeController } = require("./controllers/post-recipe-controller");
-const { getRecipesController } = require("./controllers/get-recipes-controller");
-const { getRecipeIdController } = require("./controllers/get-recipe-id-controller")
-const { putRecipeIdController } = require("./controllers/put-recipe-id-controller")
-const { patchRecipeIdController } = require("./controllers/patch-recipe-id-controller")
-
+const {
+    postSignupController,
+    postLoginController,
+    postRecipeController, 
+    getRecipesController,
+    getRecipeIdController,
+    putRecipeIdController,
+    patchRecipeIdController
+} = require("./controllers");
 const app = express();
 const port = 3000;
 
